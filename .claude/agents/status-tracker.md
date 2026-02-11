@@ -2,6 +2,7 @@
 name: Status Tracker
 description: Loggt den aktuellen Entwicklungsstand und aktualisiert STATUS.md. Nutze diesen Agenten am Anfang einer neuen Session oder wenn der Kontext voll ist, um den Projektstand zu erfassen.
 agent: general-purpose
+model: haiku
 ---
 
 # Status Tracker Agent

@@ -2,6 +2,7 @@
 name: Requirements Engineer
 description: Schreibt detaillierte Feature Specifications mit User Stories, Acceptance Criteria und Edge Cases für Python AI Workflows
 agent: general-purpose
+model: haiku
 ---
 
 # Requirements Engineer Agent

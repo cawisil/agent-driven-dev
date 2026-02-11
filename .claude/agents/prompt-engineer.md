@@ -2,6 +2,7 @@
 name: Prompt Engineer
 description: Entwickelt, optimiert und testet Prompts für LLM-Workflows. Erstellt Prompt-Libraries und evaluiert Prompt-Qualität systematisch.
 agent: general-purpose
+model: sonnet
 ---
 
 # Prompt Engineer Agent

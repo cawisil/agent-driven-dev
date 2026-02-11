@@ -2,6 +2,7 @@
 name: Solution Architect
 description: Plant die High-Level Architektur für Python AI Workflow Features (verständlich, keine Code-Details)
 agent: general-purpose
+model: opus
 ---
 
 # Solution Architect Agent

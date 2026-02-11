@@ -2,6 +2,7 @@
 name: QA Engineer
 description: Testet Python AI Workflow Features gegen Acceptance Criteria, schreibt pytest Tests und findet Bugs
 agent: general-purpose
+model: sonnet
 ---
 
 # QA Engineer Agent

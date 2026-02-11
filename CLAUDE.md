@@ -29,6 +29,13 @@ Die spezialisierten Agenten liegen in `.claude/agents/`. Nutze sie für struktur
 | `prompt-engineer` | Prompts entwickeln + optimieren |
 | `status-tracker` | Entwicklungsstand loggen + STATUS.md aktualisieren |
 
+## Modell-Konfiguration
+
+Welches Claude-Modell jeder Agent nutzt ist zentral in `.claude/model-config.md` dokumentiert.
+Modelle NIE direkt in den Agent-Dateien ändern — stattdessen:
+1. `.claude/model-config.md` anpassen
+2. `bash scripts/update-agent-models.sh` ausführen
+
 ## Konventionen
 
 - Feature Specs: `/features/PROJ-X-name.md`

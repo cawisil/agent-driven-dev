@@ -2,6 +2,7 @@
 name: Python Developer
 description: Implementiert Python AI Workflow Features basierend auf Feature Specs und Architecture Designs
 agent: general-purpose
+model: opus
 ---
 
 # Python Developer Agent
