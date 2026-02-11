@@ -1,200 +1,90 @@
-# AI Coding Starter Kit
+# Project Context
 
-> A Next.js template with an AI-powered development workflow using 6 specialized agents
+<!-- Fülle dieses Dokument mit deinen projektspezifischen Informationen aus.
+     Claude liest diese Datei automatisch und nutzt den Kontext für bessere Antworten. -->
 
-## Vision
-Build web applications faster with AI agents handling Requirements, Architecture, Development, QA, and Deployment. Each agent has clear responsibilities and a human-in-the-loop workflow for quality control.
+## Projekt-Übersicht
 
----
+**Name:** [Dein Projektname]
+**Beschreibung:** [Was baut dieses Projekt? Was ist das Ziel?]
+**Status:** In Entwicklung
 
-## Aktueller Status
-Template ready - Start by defining your first feature!
+## Ziele & Vision
 
----
+[Was willst du mit diesem AI-Workflow erreichen?]
 
-## Tech Stack
+Beispiele:
+- Automatische Zusammenfassung von Research-Papieren
+- Lokaler AI-Assistent für Dokument-Analyse
+- Pipeline zur Datenextraktion und -anreicherung
 
-### Frontend
-- **Framework:** Next.js 16 (App Router)
-- **Sprache:** TypeScript
-- **Styling:** Tailwind CSS
-- **UI Library:** shadcn/ui (copy-paste components)
+## Tech-Stack
 
-### Backend
-- **Database:** Supabase (PostgreSQL with Auth)
-- **State Management:** React useState / Context API
-- **Data Fetching:** React Server Components / fetch
+- **Sprache:** Python 3.12+
+- **LLM:** [z.B. Claude (Anthropic API) / Ollama lokal / Gemini]
+- **Key Libraries:** [z.B. anthropic, langchain, pandas, etc.]
+- **Datenspeicherung:** [z.B. SQLite / JSON-Files / Chroma Vektordatenbank]
 
-### Deployment
-- **Hosting:** Vercel (oder Netlify)
+## Projektstruktur
 
----
-
-## Features Roadmap
-
-### Your Features Will Appear Here
-
-Start by defining your first feature using the Requirements Engineer agent:
 ```
-Read .claude/agents/requirements-engineer.md and create a feature spec for [your feature idea]
+project/
+├── .claude/agents/          # AI-Agenten für den Entwicklungs-Workflow
+├── features/                # Feature Specifications (PROJ-X.md)
+├── src/                     # Python-Quellcode
+│   └── [module]/
+├── tests/                   # pytest Tests
+├── .env                     # Lokale API-Keys (NICHT ins Git!)
+├── .env.example             # Template für API-Keys
+└── requirements.txt         # Python-Dependencies
 ```
 
-Example roadmap structure:
-- [PROJ-1] Your First Feature → 🔵 Planned → [Spec](/features/PROJ-1-feature-name.md)
-- [PROJ-2] Your Second Feature → ⚪ Backlog
+## Aktuelle Features
 
----
+| Feature | Status | Beschreibung |
+|---------|--------|-------------|
+| -       | 🔵 Planned | - |
 
-## Status-Legende
-- ⚪ Backlog (noch nicht gestartet)
-- 🔵 Planned (Requirements geschrieben)
-- 🟡 In Review (User reviewt)
-- 🟢 In Development (Wird gebaut)
-- ✅ Done (Live + getestet)
+### Status-Legende
+- 🔵 Planned — Spec geschrieben, noch nicht started
+- 🟡 In Progress — In Entwicklung
+- 🟢 Done — Implementiert und getestet
+- ❌ Blocked — Blockiert durch Dependency
 
----
+## Bekannte Einschränkungen / Tech-Schulden
 
-## Development Workflow
+[Dokumentiere hier bekannte Probleme oder temporäre Lösungen]
 
-1. **Requirements Engineer** erstellt Feature Spec → User reviewt
-2. **Solution Architect** designed Schema/Architecture → User approved
-3. **PROJECT_CONTEXT.md** Roadmap updaten (Status: 🔵 Planned → 🟢 In Development)
-4. **Frontend + Backend Devs** implementieren → User testet
-5. **QA Engineer** führt Tests aus → Bugs werden gemeldet
-6. **DevOps** deployed → Status: ✅ Done
+## Nützliche Befehle
 
----
-
-## Environment Variables
-
-For projects using Supabase:
 ```bash
-NEXT_PUBLIC_SUPABASE_URL=your_supabase_url
-NEXT_PUBLIC_SUPABASE_ANON_KEY=your_anon_key
+# Virtuelle Umgebung
+python -m venv .venv
+source .venv/bin/activate  # Linux/Mac
+.venv\Scripts\activate     # Windows
+
+# Dependencies installieren
+pip install -r requirements.txt
+
+# Tests ausführen
+pytest tests/ -v
+pytest tests/ -v -m "not integration"  # Ohne echte API-Calls
+
+# Ollama (lokale Modelle)
+ollama serve                 # Server starten
+ollama pull llama3.2         # Modell herunterladen
+ollama list                  # Verfügbare Modelle
 ```
 
-See `.env.local.example` for full list.
+## API-Keys & Konfiguration
 
----
+Benötigte Environment Variables (in `.env`):
 
-## Agent-Team Verantwortlichkeiten
+```bash
+# Anthropic Claude API
+ANTHROPIC_API_KEY=sk-ant-...
 
-- **Requirements Engineer** (`.claude/agents/requirements-engineer.md`)
-  - Feature Specs in `/features` erstellen
-  - User Stories + Acceptance Criteria + Edge Cases
-
-- **Solution Architect** (`.claude/agents/solution-architect.md`)
-  - Database Schema + Component Architecture designen
-  - Tech-Entscheidungen treffen
-
-- **Frontend Developer** (`.claude/agents/frontend-dev.md`)
-  - UI Components bauen (React + Tailwind + shadcn/ui)
-  - Responsive Design + Accessibility
-
-- **Backend Developer** (`.claude/agents/backend-dev.md`)
-  - Supabase Queries + Row Level Security Policies
-  - API Routes + Server-Side Logic
-
-- **QA Engineer** (`.claude/agents/qa-engineer.md`)
-  - Features gegen Acceptance Criteria testen
-  - Bugs dokumentieren + priorisieren
-
-- **DevOps** (`.claude/agents/devops.md`)
-  - Deployment zu Vercel
-  - Environment Variables verwalten
-  - Production-Ready Essentials (Error Tracking, Security Headers, Performance)
-
----
-
-## Production-Ready Features
-
-This template includes production-readiness guides integrated into the agents:
-
-- **Error Tracking:** Sentry setup instructions (DevOps Agent)
-- **Security Headers:** XSS/Clickjacking protection (DevOps Agent)
-- **Performance:** Database indexing, query optimization (Backend Agent)
-- **Input Validation:** Zod schemas for API safety (Backend Agent)
-- **Caching:** Next.js caching strategies (Backend Agent)
-
-All guides are practical and include code examples ready to copy-paste.
-
----
-
-## Design Decisions
-
-Document your architectural decisions here as your project evolves.
-
-**Template:**
-- **Why did we choose X over Y?**
-  → Reason 1
-  → Reason 2
-
----
-
-## Folder Structure
-
+# Optional: Weitere Services
+OPENAI_API_KEY=sk-...
+OLLAMA_BASE_URL=http://localhost:11434
 ```
-ai-coding-starter-kit/
-├── .claude/
-│   └── agents/              ← 6 AI Agents (Requirements, Architect, Frontend, Backend, QA, DevOps)
-├── features/                ← Feature Specs (Requirements Engineer creates these)
-│   └── README.md            ← Documentation on how to write feature specs
-├── src/
-│   ├── app/                 ← Pages (Next.js App Router)
-│   ├── components/          ← React Components
-│   │   └── ui/              ← shadcn/ui components (add as needed)
-│   └── lib/                 ← Utility functions
-│       ├── supabase.ts      ← Supabase client (commented out by default)
-│       └── utils.ts         ← Helper functions
-├── public/                  ← Static files
-├── PROJECT_CONTEXT.md       ← This file - update as project grows
-└── package.json
-```
-
----
-
-## Getting Started
-
-1. **Install dependencies:**
-   ```bash
-   npm install
-   ```
-
-2. **Setup Environment Variables (if using Supabase):**
-   ```bash
-   cp .env.local.example .env.local
-   # Add your Supabase credentials
-   ```
-
-3. **Start development server:**
-   ```bash
-   npm run dev
-   ```
-
-4. **Start using the AI Agent workflow:**
-   - Tell Claude to read `.claude/agents/requirements-engineer.md` and define your first feature
-   - Follow the workflow: Requirements → Architecture → Development → QA → Deployment
-
----
-
-## Next Steps
-
-1. **Define your first feature idea**
-   - Think about what you want to build
-
-2. **Start with Requirements Engineer**
-   - Tell Claude: "Read .claude/agents/requirements-engineer.md and create a feature spec for [your idea]"
-   - The agent will ask clarifying questions and create a detailed spec
-
-3. **Follow the AI Agent workflow**
-   - Requirements → Architecture → Development → QA → Deployment
-   - Each agent knows when to hand off to the next agent
-
-4. **Track progress via Git**
-   - Feature specs in `/features/PROJ-X.md` show status (Planned → In Progress → Deployed)
-   - Git commits track all implementation details
-   - Use `git log --grep="PROJ-X"` to see feature history
-
----
-
-**Built with AI Agent Team System + Claude Code**
