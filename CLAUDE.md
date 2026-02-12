@@ -29,6 +29,17 @@ Die spezialisierten Agenten liegen in `.claude/agents/`. Nutze sie für struktur
 | `prompt-engineer` | Prompts entwickeln + optimieren |
 | `status-tracker` | Entwicklungsstand loggen + STATUS.md aktualisieren |
 
+### Agenten-Transparenz
+
+**Immer explizit ausgeben**, welcher Agent gerade arbeitet — vor dem Aufruf:
+
+```
+🤖 Agent: solution-architect
+📋 Aufgabe: Migrationsplan für PROJ-1 entwerfen
+```
+
+Nach Abschluss kurze Zusammenfassung, was der Agent geliefert hat.
+
 ## Modell-Konfiguration
 
 Welches Claude-Modell jeder Agent nutzt ist zentral in `.claude/model-config.md` dokumentiert.
