@@ -22,7 +22,7 @@ Dieses Repo enthält einen strukturierten Entwicklungs-Workflow mit spezialisier
 Agenten werden durch direkte Anweisung an Claude aktiviert:
 
 ```
-Lies .claude/agents/requirements-engineer.md und erstelle eine Feature Spec für [deine Idee]
+Lies .agents/agents/agent-requirements-engineer.md und erstelle eine Feature Spec für [deine Idee]
 ```
 
 Oder kürzer — Claude erkennt die Agenten automatisch anhand ihrer Beschreibung:
@@ -74,7 +74,7 @@ Claude nutzt diese Datei automatisch als Kontext.
 **Status aktualisieren** — nach einem Feature-Abschluss, einer Pause oder vollem Kontextfenster:
 
 ```
-Lies .claude/agents/status-tracker.md und aktualisiere STATUS.md
+Lies .agents/agents/agent-status-tracker.md und aktualisiere STATUS.md
 ```
 
 Der Status Tracker liest alle Feature-Specs, die Git-History und offene Änderungen und schreibt einen kompakten Snapshot inkl. eines fertigen Quick-Start-Prompts für die nächste Session.

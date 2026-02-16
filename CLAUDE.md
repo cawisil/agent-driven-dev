@@ -9,7 +9,7 @@
 
 Falls `STATUS.md` nicht existiert oder veraltet wirkt:
 ```
-Lies .claude/agents/status-tracker.md und aktualisiere STATUS.md
+Lies .agents/agents/agent-status-tracker.md und aktualisiere STATUS.md
 ```
 
 ## Projektkontext
@@ -18,13 +18,13 @@ Lies `PROJECT_CONTEXT.md` für Projekt-Ziele, Tech-Stack und Konventionen.
 
 ## Agenten
 
-Die spezialisierten Agenten liegen in `.claude/agents/`. Nutze sie für strukturierte Workflows:
+Die spezialisierten Agenten liegen in `.agents/agents/`. Nutze sie für strukturierte Workflows:
 
 | Agent | Zweck |
 |-------|-------|
 | `requirements-engineer` | Feature-Idee → Spec |
 | `solution-architect` | Spec → Architektur |
-| `python-dev` | Architektur → Code |
+| `python-developer` | Architektur → Code |
 | `qa-engineer` | Code → Tests + Bug-Report |
 | `ml-expert` | ML-Annahmen + Modellwahl + Transformationen fachlich prüfen |
 | `prompt-engineer` | Prompts entwickeln + optimieren |
@@ -53,7 +53,7 @@ Nach Abschluss:
 |-------|--------|------|
 | requirements-engineer | haiku | Feature-Idee → Spec |
 | solution-architect | **opus** | Spec → Architektur |
-| python-dev | **opus** | Architektur → Code |
+| python-developer | **opus** | Architektur → Code |
 | qa-engineer | sonnet | Code → Tests |
 | status-tracker | haiku | Nach Major-Agents |
 
@@ -66,10 +66,10 @@ Pattern: Agent arbeitet → STATUS.md updated automatisch → User sieht Fortsch
 
 ## Modell-Konfiguration
 
-Welches Claude-Modell jeder Agent nutzt ist zentral in `.claude/model-config.md` dokumentiert.
+Welches Modell jeder Agent nutzt ist zentral in `.agents/config/model-config.md` dokumentiert.
 Modelle NIE direkt in den Agent-Dateien ändern — stattdessen:
-1. `.claude/model-config.md` anpassen
-2. `bash scripts/update-agent-models.sh` ausführen
+1. `.agents/config/model-config.md` anpassen
+2. `.agents/scripts/update-agent-models.sh --apply` ausführen
 
 ## Token Budget Management
 
