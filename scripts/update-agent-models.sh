@@ -16,11 +16,12 @@ DRY_RUN=false
 # ─── Modell-Zuweisung (hier anpassen wenn neue Modelle kommen) ───────────────
 declare -A MODEL_MAP=(
   ["requirements-engineer"]="haiku"
-  ["solution-architect"]="opus"
-  ["python-dev"]="opus"
+  ["solution-architect"]="sonnet"      # Downgrade: opus → sonnet (PROJ-5 validated)
+  ["python-dev"]="sonnet"              # Downgrade: opus → sonnet (Code impl. proven)
   ["qa-engineer"]="sonnet"
   ["prompt-engineer"]="sonnet"
   ["status-tracker"]="haiku"
+  ["ml-expert"]="sonnet"               # Downgrade: opus → sonnet (or remove if unused)
 )
 # ─────────────────────────────────────────────────────────────────────────────
 

@@ -8,11 +8,12 @@
 | Agent | Modell | Begründung |
 |-------|--------|-----------|
 | requirements-engineer | `haiku` | Konversation + strukturierter Output — kein tiefes Reasoning nötig, schnell und günstig |
-| solution-architect | `opus` | Architektur-Entscheidungen + Abwägungen brauchen gutes Reasoning |
-| python-dev | `opus` | Coding-Qualität wichtiger als Geschwindigkeit; gutes Kontextfenster für große Codebasen |
+| solution-architect | `sonnet` | Architektur-Design (downgrade: opus→sonnet ab Session 9, PROJ-5 validated) — Sonnet reicht für Design-Entscheidungen |
+| python-dev | `sonnet` | Code-Implementierung (downgrade: opus→sonnet, PROJ-5 4-5h Code kompllett mit Sonnet) |
 | qa-engineer | `sonnet` | Code verstehen + Tests schreiben + Bugs analysieren |
 | prompt-engineer | `sonnet` | Nuanciertes Sprachverständnis, Prompt-Qualität hängt stark vom Modell ab |
 | status-tracker | `haiku` | Nur lesen + zusammenfassen — maximale Geschwindigkeit, minimale Kosten |
+| ml-expert | `sonnet` | Fachliche ML-Bewertung (downgrade: opus→sonnet) — Sonnet reicht für meiste ML-Tasks |
 
 ## Verfügbare Claude-Modelle
 
@@ -24,12 +25,19 @@ opus    → claude-opus-4-6             (stärkstes Modell, teuer — für hochk
 
 ## Wann auf `opus` upgraden?
 
-Temporär für einen Agenten auf `opus` wechseln wenn:
-- Sehr komplexe Architektur-Entscheidungen (solution-architect)
-- Große, verworrene Codebase wird refactored (python-dev)
-- Debugging eines schwer zu findenden Bugs (qa-engineer)
+**Standard: Sonnet für alle Major-Agents** (seit Session 9, PROJ-5 validated)
+
+Nur temporär zu `opus` eskalieren wenn:
+- **solution-architect:** Design mit 5+ neuen Komponenten + 3+ strategischen Trade-offs
+- **python-dev:** Refactoring 50+ Dateien oder komplexe neue Dependencies/APIs
+- **qa-engineer:** Kritischer Bug, schwer zu diagnostizieren
 
 Danach wieder zurück auf `sonnet` um Kosten zu sparen.
+
+**Cost Impact (Session 9):**
+- Before: 3 Opus Agents (solution-architect, python-dev, ml-expert)
+- After: 0 Opus Agents (all Sonnet) — ~40-50% Kostenersparnis
+- Estimate: ~20-25€/Projekt → ~12-15€/Projekt
 
 ## Andere LLMs
 

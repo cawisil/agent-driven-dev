@@ -117,7 +117,7 @@ Gute nächste Schritte:
 - ✅ "PROJ-3 Architektur entwerfen: `Lies .claude/agents/solution-architect.md`"
 
 ### Session-Handover-Kommentar
-Am Ende von `STATUS.md` immer einen kurzen "Als nächstes"-Block schreiben, der direkt als Claude-Prompt nutzbar ist:
+Am Ende von `STATUS.md` immer einen kurzen "Als nächstes"-Block schreiben, der direkt als Claude-Prompt nutzbar ist und den entsprechenden Agenten referenziert:
 
 ```markdown
 ---
@@ -127,7 +127,7 @@ Am Ende von `STATUS.md` immer einen kurzen "Als nächstes"-Block schreiben, der 
 Lies STATUS.md (erledigt) und dann:
 
 ```
-[Konkreter nächster Prompt, den der User ausführen kann]
+[Konkreter nächster Agenten-Prompt, den der User ausführen kann]
 ```
 ```
 
